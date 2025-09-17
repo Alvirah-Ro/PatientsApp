@@ -1,5 +1,7 @@
+// This is how to import named exports
+// Named exports let one export multiple values by name
 import {Patient, Appointment, Lab} from './interface';
-import {patients} from './interface';
+import {patients} from './patients';
 
 
 // Patient Manager Object for patient-related logic
@@ -15,7 +17,7 @@ class PatientManagerClass {
         return this.patients.length > 0
         ? Math.max(...this.patients.map(p => p.id)) + 1
         : 1;
-    },
+    }
 
     // Reusable function for creating a new patient
     addPatient(
@@ -23,8 +25,8 @@ class PatientManagerClass {
         age: number,
         diagnosis: string,
         medications: string[] = [],
-        appointments: [] as Appointment[],
-        labs: [] as Lab[]
+        appointments: Appointment[] = [],
+        labs: Lab[] = []
     ): Patient {
         const newPatient: Patient = {
         id: this.getNextId(),
@@ -64,4 +66,5 @@ getAllPatientNames() {
 //Usage
 const PatientManager = new PatientManagerClass(patients);
 
+// export default allows one to export a single value
 export default PatientManager;

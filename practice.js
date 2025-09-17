@@ -1,6 +1,6 @@
 // use command - node practice - to run file
 
-import patients from './array.js';
+import patients from './PatientsApp/patients.js';
 import readline from 'readline';
 
 // This converts the patient object into a formatted JSON string
