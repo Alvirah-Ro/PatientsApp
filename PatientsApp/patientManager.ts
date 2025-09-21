@@ -1,7 +1,7 @@
 // This is how to import named exports
 // Named exports let one export multiple values by name
-import {Patient, Appointment, Lab} from './interface';
-import {patients} from './patients';
+import type {Patient, Appointment, Lab} from './interface';
+import {patients} from './patients.ts';
 
 
 // Patient Manager Object for patient-related logic
@@ -60,6 +60,12 @@ prettyPrintPatients() {
 getAllPatientNames() {
     return this.patients.map(patient => patient.name);
 }
+
+// Get all patients over the age of 50
+getPatientsOver50() {
+    return this.patients.filter(patient => patient.age >= 50);
+}
+
 
 }
 
