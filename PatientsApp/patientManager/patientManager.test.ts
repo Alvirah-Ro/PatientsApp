@@ -21,3 +21,18 @@ test("adds a new patient", () => {
     expect(patient.diagnosis).toBe("Migraines");
     expect(PatientManager.patients.length).toBe(1);
 });
+
+test("increments patient ID correctly", () => {
+    PatientManager.addPatient("Cory Thaiders", 36, "Hypertention");
+    const patient2 = PatientManager.addPatient("Jack Thaiders", 40, "Diabetes");
+
+    expect(patient2.id).toBe(2);
+});
+
+test("retrieves patient by ID", () => {
+    const patient = PatientManager.addPatient("Sierra August-Eastwood", 45, "Asthma");
+    const found = PatientManager.getPatient(patient.id);
+
+    expect(found).toEqual(patient);
+});
+
