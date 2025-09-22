@@ -4,7 +4,7 @@
 // - use tsc+node for production or sharing code; command is: tsc main.ts to compile, node main.js to run
 
 // This is how to import a default export
-import PatientManager from "./patientManager.ts";
+import PatientManager from "./patientManager/patientManager.ts";
 
 //console.log(PatientManager);
 
