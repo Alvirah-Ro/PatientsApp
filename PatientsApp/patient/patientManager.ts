@@ -1,10 +1,10 @@
 // This is how to import named exports
 // Named exports let one export multiple values by name
 import type {Patient, Appointment, Lab} from '../interface.ts';
-import {patients} from '../patients.ts';
+import {patients} from './patients.ts';
 
 
-// Patient Manager Object for patient-related logic
+// Patient Manager Object for patient-related CRU
 class PatientManagerClass {
     patients: Patient[]; // Type annotation for the array
 

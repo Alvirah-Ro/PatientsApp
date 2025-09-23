@@ -1,6 +1,6 @@
 // Tests for PatientManager
 // Use command: npm test
-import PatientManager from "./patientManager";
+import PatientManager from "../patientManager";
 
 // This runs before every single test
 // Reset the patients array to empty so tests don't affect each other
@@ -35,4 +35,6 @@ test("retrieves patient by ID", () => {
 
     expect(found).toEqual(patient);
 });
+
+
 
